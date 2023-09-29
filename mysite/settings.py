@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 'blog.apps.BlogConfig'
     'blog',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +113,15 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'ace.zotac@mail.ru'
+EMAIL_HOST_PASSWORD = 'j75VmaDPGH1VJN8heBfv'
+DEFAULT_FROM_EMAIL = 'ace.zotac@mail.ru'
+
 
 
 # Static files (CSS, JavaScript, Images)
